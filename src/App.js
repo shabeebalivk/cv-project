@@ -5,11 +5,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import Create from './components/Create';
 import View from './components/View';
 import Edit from './components/Edit';
+import Tag from './components/Tag';
 
 
 function App() {
@@ -19,13 +21,14 @@ function App() {
        <Header />
       <Switch>
         <Route path="/view">
+          {/* <Tag /> */}
           <View />
         </Route>
         <Route path="/create">
           <Create />
         </Route>
-        <Route path="/edit">
-          <Edit />
+        <Route path="/">
+          <Redirect to="/create" />
         </Route>
       </Switch>
     </div>

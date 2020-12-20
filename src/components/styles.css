@@ -1,0 +1,10 @@
+.containerCreate {
+    width: 60%;
+}
+
+@media (max-width: 600px) {
+    .containerCreate {
+        width: 90%;
+    }
+    
+}
