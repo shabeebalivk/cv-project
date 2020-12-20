@@ -6,7 +6,6 @@ import './styles.css'
 function Create() {
    const [educationFormNumber, setEducationFormNumber] = useState([1])
    const [experienceFormNumber, setExperienceFormNumber] = useState([1])
-   const [skillFormNumber, setSkillFormNumber] = useState([1])
    const [skills, setSkills] = useState([])
    const [name, setName] = useState()
    const [email, setEmail] = useState()
@@ -116,9 +115,16 @@ function Create() {
               <button 
                 onClick={e=> {
                 // console.log(name, phone, email, address, education, experience, skills); 
-                e.preventDefault()
-                  if(name && phone && email && address && education && experience && skills.length !== 0) {
-                    function validateEmail(mail) 
+                e.preventDefault();
+                console.log(typeof experience, education)
+                // if(Object.keys(experience).length === 0 || Object.keys(education).length === 0) {
+                //   alert('Please press + button to add experience or education test')
+                //  } else {
+
+                 
+                  if(name && phone && email && address && education.length !==0 && experience.length !== 0 && skills.length !== 0) {
+                   
+                     function validateEmail(mail) 
                         {
                             var re = /\S+@\S+\.\S+/;
                             return re.test(mail);
@@ -138,13 +144,11 @@ function Create() {
                       }})
                     }
                   } else {
-                    if(education.length === 0 || experience.length===0) {
-                      alert(' You must click + button to add experience and education')
-
-                    } else {
+                     
                       alert('Please fill all the details. You must click + button to add experience and education')
-                    }
+                     
                   }
+                // }
               }}>
                   Submit for cv generation
               </button>
