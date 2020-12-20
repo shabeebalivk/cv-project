@@ -1,17 +1,7 @@
 import React from 'react'
 import { useLocation, useHistory } from 'react-router-dom'
 
-// const education = [
-//     {institution: 'mea', year: 2015, degree: 'btech'},
-//     {institution: 'mes', year: 2016, degree: 'barch'},
-// ]
-
-// const experience = [
-//     {company: 'nucore', experienceYear: 2017, designation: 'tester'},
-//     {company: 'lapzoid', experienceYear: 2019, designation: 'react developer'},
-// ]
-
-// const skills = ['Java', 'Python', 'React']
+ 
 
 function View(props) {
     const location = useLocation()

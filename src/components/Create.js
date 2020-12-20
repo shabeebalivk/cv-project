@@ -95,17 +95,7 @@ function Create() {
                   </div>
                   ))}
                 </div>
-                {/* <div className="form-group">
-                  <label htmlFor="formGroupExampleInput">Skill</label>
-                  {skillFormNumber.map((item, index)=> (
-                    <div style={{width: '100%', display: 'flex', marginBottom: 10}}>
-                  <input style={{  marginRight: 5}} type="text" className="form-control" id="formGroupExampleInput" placeholder="Skill" />
-                  { index === skillFormNumber.length-1 &&
-                    <button  onClick={(e)=>{e.preventDefault(); setSkillFormNumber(skillFormNumber.concat([1]))}}>+</button>
-                  }
-                  </div>
-                  ))}
-                </div> */}
+                 
                 <div className="form-group" >
                   <label htmlFor="formGroupExampleInput" style={{marginBottom: 10}}>Skill</label>
                   <Tag onSkillAdd={skillAdd} onSkillRemove={skillRemove}/>
